@@ -1,15 +1,9 @@
-a = "Hello World"
-print(a)
-
-num1 = float(input("Enter your number: "))
-num2 = float(input("Enter your number: "))
-
-sum_result = num1 + num2
-difference_result = num1 - num2
-multiply_result = num1 * num2
-divisibily_result = num1 / num2
-
-print(f"sum: {sum_result}")
-print(f"difference: {difference_result}")
-print(f"multiply: {multiply_result}")
-print(f"divisible: {divisibily_result}")
+import requests
+import json
+query = input("What type of news are you interested in? ")
+url = f"https://newsapi.org/v2/everything?q={query}&domains=techcrunch.com&from=2024-08-02&sortBy=publishedAt&apiKey=487fdc3a817b47629264ee425ffbab0b"
+r = requests.get(url)
+# print(r.text)
+# json.loads(r.text)
+a = json.loads(r.text)
+print(a["articles"][0])
