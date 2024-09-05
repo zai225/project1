@@ -30,8 +30,9 @@ if another_order == "Yes":
     else:
         print(f"Ordered Item {item_2} is not available yet")
 
-print(f"The Total amount of your order to psy is {order_total}")    
-    
+print(f"The Total amount of your order to pay is {order_total}")
+  
+print("Thanks for ordering from Ool Jalool cafe\nYour order will be on your table in 10min")
 
 
 
